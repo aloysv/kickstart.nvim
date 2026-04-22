@@ -1,6 +1,3 @@
--- Neo-tree is a Neovim plugin to browse the file system
--- https://github.com/nvim-neo-tree/neo-tree.nvim
-
 ---@module 'lazy'
 ---@type LazySpec
 return {
@@ -8,12 +5,14 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    -- Changed from '\\' to '<leader>e'
+    -- Using 'toggle' instead of 'reveal' allows the same key to close it if it's already open
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'NeoTree toggle', silent = true },
   },
   ---@module 'neo-tree'
   ---@type neotree.Config
@@ -21,7 +20,8 @@ return {
     filesystem = {
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          -- Update this so '<leader>e' also closes the window when you are inside the tree
+          ['<leader>e'] = 'close_window',
         },
       },
     },

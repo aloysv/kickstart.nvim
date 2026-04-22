@@ -8,6 +8,15 @@ return {
   config = function()
     local lint = require 'lint'
     lint.linters_by_ft = {
+      c = { 'clangtidy' },
+      cmake = { 'cmakelint' },
+      cpp = { 'clangtidy' },
+      python = { 'ruff' },
+      sh = { 'shellcheck' },
+      bash = { 'shellcheck' },
+      zsh = { 'shellcheck' },
+      make = { 'checkmake' },
+      go = { 'golangcilint' },
       markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
     }
 
