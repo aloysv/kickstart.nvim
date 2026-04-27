@@ -24,6 +24,9 @@ vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Highlight matching brackets while the cursor is on one of them.
+vim.o.showmatch = true
+
 -- Default to 4-space indentation unless a project/filetype overrides it.
 vim.o.expandtab = true
 vim.o.shiftwidth = 4

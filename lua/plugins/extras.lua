@@ -15,6 +15,25 @@ return {
   },
 
   {
+    'akinsho/bufferline.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      options = {
+        themable = true,
+        offsets = {
+          {
+            filetype = 'neo-tree',
+            text = 'Files',
+            highlight = 'Directory',
+            text_align = 'left',
+          },
+        },
+      },
+    },
+  },
+
+  {
     'kawre/leetcode.nvim',
     build = ':TSUpdate html',
     dependencies = {

@@ -27,8 +27,8 @@ return {
         -- in case there is no indent query, the indentexpr will fallback to the vim's built in one
         local has_indent_query = vim.treesitter.query.get(language, 'indents') ~= nil
 
-        -- enables treesitter based indentation
-        if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
+        -- Python indentation is more reliable with Neovim's built-in rules here.
+        if has_indent_query and language ~= 'python' then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
       end
 
       local available_parsers = require('nvim-treesitter').get_available()

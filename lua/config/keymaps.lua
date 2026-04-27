@@ -31,6 +31,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set({ 'n', 'v' }, '<C-s>', '<Cmd>silent update<CR>', { desc = 'Save buffer' })
 vim.keymap.set('i', '<C-s>', '<C-o><Cmd>silent update<CR>', { desc = 'Save buffer' })
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<leader>x', '<Cmd>Bdelete<CR>', { desc = 'Close buffer' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
