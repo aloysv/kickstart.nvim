@@ -16,6 +16,29 @@ return {
   },
 
   {
+    'scottmckendry/cyberdream.nvim',
+    lazy = false,
+    priority = 1000000,
+    opts = {
+      transparent = true,
+      borderless_pickers = false,
+      saturation = 0.95,
+      cache = false,
+      highlights = {
+        TroubleNormal = { bg = 'none' },
+        TroubleNormalNC = { bg = 'none' },
+        WinSeparator = { fg = '#3c4048', bg = 'none' },
+        IndentBlanklineChar = { fg = '#7b8496' },
+        TreesitterContext = { bg = '#232429' },
+        TreesitterContextLineNumber = { bg = '#232429' },
+        TreesitterContextBottom = { bg = '#232429', underline = true },
+        CursorLineNr = { fg = '#ffffff' },
+      },
+    },
+    config = function(_, opts) require('cyberdream').setup(opts) end,
+  },
+
+  {
     'ramojus/mellifluous.nvim',
     priority = 1000,
     config = function()
