@@ -79,9 +79,9 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+
       local function colorscheme_picker()
-        local colors = vim.tbl_filter(function(color) return color ~= 'cyberdream-light' end, vim.fn.getcompletion('', 'color'))
-        builtin.colorscheme { enable_preview = true, colors = colors }
+        builtin.colorscheme { enable_preview = true }
       end
 
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })

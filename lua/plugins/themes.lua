@@ -60,7 +60,6 @@ return {
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    config = function() vim.cmd 'colorscheme rose-pine' end,
   },
 
   { -- Colorscheme
@@ -83,7 +82,6 @@ return {
           hl.MatchParen = { fg = white, bg = '#5f5a8a', bold = true, underline = true }
         end,
       }
-      vim.cmd.colorscheme 'vague'
     end,
   },
 }
