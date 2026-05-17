@@ -16,6 +16,33 @@ return {
   },
 
   {
+    'iagorrr/noctishc.nvim',
+    priority = 1000,
+  },
+
+  { 'zitrocode/carvion.nvim', lazy = false, priority = 1000, opts = {} },
+
+  {
+    'ficcdaf/ashen.nvim',
+    -- optional but recommended,
+    -- pin to the latest stable release:
+    tag = '*',
+    lazy = false,
+    priority = 1000,
+    -- configuration is optional!
+    opts = {
+      -- your settings here
+    },
+  },
+
+  {
+    'xiantang/darcula-dark.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+  },
+
+  {
     'scottmckendry/cyberdream.nvim',
     lazy = false,
     priority = 1000000,
