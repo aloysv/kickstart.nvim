@@ -7,10 +7,11 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     local lint = require 'lint'
+
     lint.linters_by_ft = {
-      c = { 'clangtidy' },
+      c = {},
       cmake = { 'cmakelint' },
-      cpp = { 'clangtidy' },
+      cpp = {},
       python = { 'ruff' },
       sh = { 'shellcheck' },
       bash = { 'shellcheck' },

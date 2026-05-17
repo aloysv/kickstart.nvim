@@ -126,7 +126,7 @@ return {
       ---@type table<string, vim.lsp.Config>
       local servers = {
         clangd = {
-          cmd = { 'clangd', '--background-index', '--clang-tidy' },
+          cmd = { '/usr/bin/clangd', '--background-index', '--clang-tidy', '--query-driver=/usr/bin/g++-14' },
         },
         gopls = {
           settings = {
