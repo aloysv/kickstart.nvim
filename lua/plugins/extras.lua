@@ -1,5 +1,10 @@
 return {
   {
+    'stevearc/dressing.nvim',
+    event = 'VeryLazy',
+  },
+
+  {
     'MeanderingProgrammer/render-markdown.nvim',
     ft = { 'markdown' },
     dependencies = {
@@ -45,6 +50,9 @@ return {
     },
     opts = {
       lang = 'cpp',
+      plugins = {
+        non_standalone = true,
+      },
     },
   },
 }
