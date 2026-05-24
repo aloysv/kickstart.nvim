@@ -65,24 +65,6 @@ return {
     config = function(_, opts) require('cyberdream').setup(opts) end,
   },
 
-  {
-    'ramojus/mellifluous.nvim',
-    priority = 1000,
-    config = function()
-      local colorsets = { 'mellifluous', 'alduin', 'mountain', 'tender', 'kanagawa_dragon' }
-
-      vim.api.nvim_create_user_command('MellifluousVariant', function(opts)
-        require('mellifluous').setup { colorset = opts.args }
-        vim.cmd.colorscheme 'mellifluous'
-      end, {
-        nargs = 1,
-        complete = function(arg_lead)
-          return vim.tbl_filter(function(colorset) return vim.startswith(colorset, arg_lead) end, colorsets)
-        end,
-      })
-    end,
-  },
-
   -- lua/plugins/rose-pine.lua
   {
     'rose-pine/neovim',
