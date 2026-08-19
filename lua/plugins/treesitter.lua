@@ -55,4 +55,19 @@ return {
       })
     end,
   },
+
+  { -- Keep the current function/class context visible while scrolling.
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {
+      enable = true,
+      max_lines = 0,
+      min_window_height = 0,
+      multiline_threshold = 20,
+      mode = 'cursor',
+      separator = nil,
+      trim_scope = 'outer',
+      zindex = 20,
+    },
+  },
 }

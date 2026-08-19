@@ -32,7 +32,7 @@ return {
       '    ios_base::sync_with_stdio(false);',
       '    cin.tie(nullptr);',
       '    int t = 1;',
-      '    cin >> t;',
+      '    // cin >> t;',
       '    for (int i = 0; i < t; i++) {',
       '        if (solve(t, i)) {',
       '            break;',
