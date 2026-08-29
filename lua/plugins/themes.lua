@@ -6,6 +6,17 @@ return {
   },
 
   {
+    'Aejkatappaja/cendre',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('cendre').setup {
+        background = 'hard', -- "hard" | "medium" | "soft"
+        italic_virtual_text = false,
+      }
+    end,
+  },
+  {
     'nickkadutskyi/jb.nvim',
     priority = 1000,
   },
@@ -21,6 +32,12 @@ return {
   },
 
   { 'zitrocode/carvion.nvim', lazy = false, priority = 1000, opts = {} },
+
+  {
+    'thekylehuang/cole.nvim',
+    priority = 1000,
+    config = function() vim.cmd.colorscheme 'cole' end,
+  },
 
   {
     'ficcdaf/ashen.nvim',
